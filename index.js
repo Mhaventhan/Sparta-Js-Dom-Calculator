@@ -4,6 +4,8 @@ var num1,num2,operator;
 var calNumb = document.getElementsByClassName('buttonNum');
 var disScreen = document.getElementById('screen');
 var opSelect = document.getElementsByClassName('operator');
+var ac = document.getElementById('clear');
+var equal = document.getElementById('equals');
 
 
 
@@ -16,20 +18,19 @@ var opSelect = document.getElementsByClassName('operator');
       }
     });
 
-  }
-
-// after pressing operator
-// save the value from the screen into num1
-var num1= disScreen.innerHTML;
-// disScreen.innerHTML= "";
-// save the operator into operator
+  };
 
 
-// if user presses equals
+for (var i = 0; i < opSelect.length; i++) {
+  opSelect[i].addEventListener('click',function () {
+    num1 = disScreen.innerHTML;
+    operator = this.innerHTML;
+    disScreen.innerHTML;
 
-// assigned num2 the discreen.innerHTML
-var num2= disScreen.innerHTML;
-// =
-  function addition(num1, operator, num2) {
+  });
+};
 
-}
+equal.addEventListener('click',function () {
+  num2 = disScreen.innerHTML;
+
+})
